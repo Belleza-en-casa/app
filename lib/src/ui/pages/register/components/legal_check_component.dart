@@ -7,18 +7,18 @@ class LegalCheckComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         CheckboxListTile(
           value: false,
           onChanged: (e) {},
-          title: Text("Acepto términos y condiciones"),
+          title: const Text("Acepto términos y condiciones"),
         ),
         CheckboxListTile(
           value: false,
           onChanged: (e) {},
-          title: Text("Acepto politica de tratamiento de datos personales"),
+          title: const Text("Acepto politica de tratamiento de datos personales"),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
       ],
     );
   }

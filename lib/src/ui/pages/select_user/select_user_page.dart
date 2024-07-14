@@ -64,7 +64,7 @@ class SelectUserPage extends StatelessWidget {
                     onPressed: () {
                       setUserType = state.userType;
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => OnboardingPage()));
+                          MaterialPageRoute(builder: (_) => const OnboardingPage()));
                     },
                     title: "Continuar",
                     enabled: state.userType != UserType.none),

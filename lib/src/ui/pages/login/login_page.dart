@@ -15,7 +15,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../cubits/login/login_cubit.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();

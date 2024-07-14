@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OnboardingPage extends StatefulWidget {
-  OnboardingPage({super.key});
+  const OnboardingPage({super.key});
 
   @override
   State<OnboardingPage> createState() => _OnboardingPageState();
@@ -107,7 +107,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       _cubit.addCurrentIndex(state.currentIndex + 1);
                     } else {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => LoginPage()));
+                          MaterialPageRoute(builder: (_) => const LoginPage()));
                     }
                   },
                   title: "Continuar",
@@ -120,7 +120,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           TextButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => LoginPage()));
+                    context, MaterialPageRoute(builder: (_) => const LoginPage()));
               },
               child: const Text("Omitir"))
         ],

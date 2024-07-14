@@ -7,7 +7,7 @@ import 'package:belleza_en_casa/src/ui/widgets/btn_widet.dart';
 import 'package:flutter/material.dart';
 
 class SplashProfile extends StatelessWidget {
-  SplashProfile({super.key});
+  const SplashProfile({super.key});
 
   @override
   Widget build(BuildContext context) {

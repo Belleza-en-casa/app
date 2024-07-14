@@ -63,6 +63,6 @@ class RegisterPage extends StatelessWidget {
           width: _size.width * .55,
           child:   BtnWidget.btn(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (_)=>SplashProfile()));
+                Navigator.push(context, MaterialPageRoute(builder: (_)=>const SplashProfile()));
               }, title: "Crear cuenta", enabled: true)));
 }
