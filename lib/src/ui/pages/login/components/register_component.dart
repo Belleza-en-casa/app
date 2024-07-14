@@ -8,7 +8,7 @@ class RegisterComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (_)=> RegisterPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (_)=> const RegisterPage()));
         },
         child: const Text(
           "Crear cuenta",
