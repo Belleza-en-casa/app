@@ -10,16 +10,36 @@ import 'package:belleza_en_casa/src/ui/widgets/base_widget.dart';
 import 'package:belleza_en_casa/src/ui/widgets/btn_widet.dart';
 import 'package:belleza_en_casa/src/ui/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class LoginPage extends StatelessWidget {
+import '../../cubits/login/login_cubit.dart';
+
+class LoginPage extends StatefulWidget {
   LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   late Size _size;
+  late LoginCubit _cubit;
+  @override
+  void initState() {
+    super.initState();
+
+    _cubit = LoginCubit(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     _size = MediaQuery.sizeOf(context);
-    return BaseWidget(
-      padding: 0,
-      child: _body(),
+    return BlocProvider(
+      create: (context) => _cubit,
+      child: BaseWidget(
+        padding: 0,
+        child: _body(),
+      ),
     );
   }
 
@@ -59,9 +79,16 @@ class LoginPage extends StatelessWidget {
                         _btn()
                       ])))));
 
-  Widget _btn() => Center(
-      child: SizedBox(
-          width: _size.width * .55,
-          child: BtnWidget.btn(
-              onPressed: () {}, title: "Ingresar", enabled: false)));
+  Widget _btn() => BlocBuilder<LoginCubit, LoginState>(
+        builder: (context, state) {
+          return Center(
+              child: SizedBox(
+                  width: _size.width * .55,
+                  child: BtnWidget.btn(
+                    onPressed: () {},
+                    title: "Ingresar",
+                    enabled: state.btnEnabled,
+                  )));
+        },
+      );
 }
