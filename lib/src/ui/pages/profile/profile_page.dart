@@ -17,7 +17,7 @@ class ProfilePage extends StatelessWidget {
     late Widget child;
 
     if (viewType == ViewType.addInfoProfesional) {
-      child = ProfesionalStep();
+      child = const ProfesionalStep();
     }
     return child;
   }

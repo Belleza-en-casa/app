@@ -6,6 +6,6 @@ class CategoryComponet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DropWidget(hint: "Selecciona una categoria", list: [], onChanged: (e){});
+    return DropWidget(hint: "Selecciona una categoria", list: const [], onChanged: (e){});
   }
 }

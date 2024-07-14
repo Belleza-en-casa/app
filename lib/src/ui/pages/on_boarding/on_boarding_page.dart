@@ -1,5 +1,7 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:belleza_en_casa/src/core/global/global.dart';
+import 'package:belleza_en_casa/src/ui/cubits/select_user/selec_user_cubit.dart';
 import 'package:belleza_en_casa/src/ui/pages/login/login_page.dart';
 import 'package:belleza_en_casa/src/ui/pages/on_boarding/components/base_onboarding_component.dart';
 import 'package:belleza_en_casa/src/ui/pages/on_boarding/components/indicator_component.dart';
@@ -23,7 +25,7 @@ class OnboardingPage extends StatelessWidget {
             children: [
               BaseOnboardingComponent(
                   img: "",
-                  txt1: "¡Únete a Belleza en Casa!",
+                  txt1: getUserType==UserType.cliente?"": "¡Únete a Belleza en Casa!",
                   txt2: "Ofrece tus servicios desde casa."),
               BaseOnboardingComponent(
                   img: "",

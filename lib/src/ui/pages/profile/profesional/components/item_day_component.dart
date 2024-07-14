@@ -6,7 +6,7 @@ class ItemDayComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 2),
+      margin: const EdgeInsets.symmetric(horizontal: 2),
       height: MediaQuery.sizeOf(context).height * .2,
       width: MediaQuery.sizeOf(context).width * .15,
       decoration: BoxDecoration(
